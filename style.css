@@ -1,3 +1,279 @@
 *{
-    background-color: blue;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+
+.container{
+    border: solid 2px black;
+
+    display: grid;
+    grid-template-columns: minmax(auto, 1fr) minmax(400px,1fr) minmax(auto, 1fr);
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(223, 222, 222);
+}
+
+/* LEFT-MENU */
+.left-menu{
+    border: solid 2px black;
+    padding: 10px 0 0 120px;
+    display: grid;
+    grid-template-rows: auto 70px;
+    background-color: white;
+}
+
+.navigation{
+    display: grid;
+    grid-auto-rows: 45px;
+
+}
+
+.twitter-icon{
+    height: 25px;
+    width: 25px;
+    margin-bottom: 50px;
+}
+
+.home p{
+    display: inline;
+    font-size: larger;
+    padding: 10px;
+    font-weight: bold;
+    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+}
+
+.home-icon{
+ width: 25px;
+ height: 25px;
+}
+
+
+.explore p{
+    display: inline;
+    font-size: larger;
+    padding: 10px;
+    font-weight: bold;
+    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.explore-icon{
+    width: 25px;
+    height: 25px; 
+}
+
+
+.notifications p{
+    display: inline;
+    font-size: larger;
+    padding: 10px;
+    font-weight: bold;
+    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.notifications-icon{
+    width: 25px;
+    height: 25px; 
+}
+
+
+.messages p{
+    display: inline;
+    font-size: larger;
+    padding: 10px;
+    font-weight: bold;
+    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.messages-icon{
+    width: 25px;
+    height: 25px; 
+}
+
+.bookmarks p{
+    display: inline;
+    font-size: larger;
+    padding: 10px;
+    font-weight: bold;
+    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.bookmarks-icon{
+    width: 25px;
+    height: 25px; 
+}
+
+
+.lists p{
+    display: inline;
+    font-size: larger;
+    padding: 10px;
+    font-weight: bold;
+    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.lists-icon{
+    width: 25px;
+    height: 25px; 
+}
+
+.profile p{
+    display: inline;
+    font-size: larger;
+    padding: 10px;
+    font-weight: bold;
+    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.profile-icon{
+    width: 25px;
+    height: 25px; 
+}
+
+.more p{
+    display: inline;
+    font-size: larger;
+    padding: 10px;
+    font-weight: bold;
+    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.more-icon{
+    width: 25px;
+    height: 25px; 
+}
+
+.tweet{
+    background-color: #00acee;
+    margin-right: 30px;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 1px 1px 1px 1px #00acee;
+    border: none;
+}
+
+.tweet a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.my-profile{
+
+}
+
+.profile-picture{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+
+.points{
+  margin-left: 140px; 
+}
+
+/* MAIN */
+.main{
+    border: solid 2px black;
+    background-color: white;
+}
+
+
+.main h1{
+    border-bottom: solid 2px rgb(223, 222, 222);
+    margin-bottom: 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: smaller;
+}
+
+.comment-box{
+    border-bottom: solid 2px rgb(223, 222, 222);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.comment{
+    position: relative;
+}
+
+
+.comment .profile-picture{
+    position: absolute;
+    margin-left: 10px;
+}
+
+.comment .write-comment{
+    margin-left: 55px;
+    margin-top: 10px;
+    overflow: hidden;
+    border: none;
+}
+
+
+.comment-icon{
+    display: inline;
+    margin-left: 55px;
+}
+
+.media-icon{
+    width: 20px;
+    height: 20px; 
+    fill: #00acee;
+}
+
+.gif-icon{
+    width: 20px;
+    height: 20px; 
+    fill: #00acee;
+}
+
+.chart-icon{
+    width: 20px;
+    height: 20px; 
+    fill: #00acee;
+}
+
+.emoji-icon{
+    width: 20px;
+    height: 20px; 
+    fill: #00acee;
+}
+
+.calendar-icon{
+    width: 20px;
+    height: 20px; 
+    fill: #00acee;
+}
+
+
+.tweet-1{
+    background-color: #00acee;
+    margin-right: 30px;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 1px 1px 1px 1px #00acee;
+    border: none;
+    margin-left: 110px;
+    display: inline;
+    
+}
+
+.tweet-1 a{
+    text-decoration: none;
+    color: white;
+    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    
+    margin: 30px;
+}
+
+
+/* RIGHT-MENU */
+.right-menu{
+    border: solid 2px black;
 }
