@@ -37,7 +37,14 @@
     margin-bottom: 50px;
 }
 
-.home p{
+.home p,
+.explore p,
+.notifications p,
+.messages p,
+.bookmarks p,
+.lists p,
+.profile p,
+.more p{
     display: inline;
     font-size: larger;
     padding: 10px;
@@ -46,105 +53,19 @@
     
 }
 
-.home-icon{
+.home-icon,
+.explore-icon,
+.notifications-icon,
+.messages-icon,
+.bookmarks-icon,
+.lists-icon,
+.profile-icon,
+.more-icon{
  width: 25px;
  height: 25px;
 }
 
 
-.explore p{
-    display: inline;
-    font-size: larger;
-    padding: 10px;
-    font-weight: bold;
-    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-.explore-icon{
-    width: 25px;
-    height: 25px; 
-}
-
-
-.notifications p{
-    display: inline;
-    font-size: larger;
-    padding: 10px;
-    font-weight: bold;
-    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-.notifications-icon{
-    width: 25px;
-    height: 25px; 
-}
-
-
-.messages p{
-    display: inline;
-    font-size: larger;
-    padding: 10px;
-    font-weight: bold;
-    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-.messages-icon{
-    width: 25px;
-    height: 25px; 
-}
-
-.bookmarks p{
-    display: inline;
-    font-size: larger;
-    padding: 10px;
-    font-weight: bold;
-    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-.bookmarks-icon{
-    width: 25px;
-    height: 25px; 
-}
-
-
-.lists p{
-    display: inline;
-    font-size: larger;
-    padding: 10px;
-    font-weight: bold;
-    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-.lists-icon{
-    width: 25px;
-    height: 25px; 
-}
-
-.profile p{
-    display: inline;
-    font-size: larger;
-    padding: 10px;
-    font-weight: bold;
-    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-.profile-icon{
-    width: 25px;
-    height: 25px; 
-}
-
-.more p{
-    display: inline;
-    font-size: larger;
-    padding: 10px;
-    font-weight: bold;
-    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-.more-icon{
-    width: 25px;
-    height: 25px; 
-}
 
 .tweet{
     background-color: #00acee;
@@ -169,6 +90,7 @@
     height: 40px;
     width: 40px;
     border-radius: 50%;
+    margin-left: 10px;
 }
 
 
@@ -176,10 +98,17 @@
   margin-left: 140px; 
 }
 
+
 /* MAIN */
 .main{
     border: solid 2px black;
-    background-color: white;
+    background-color: rgb(223, 222, 222);
+    overflow: scroll;
+    overflow: auto;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 
@@ -190,12 +119,14 @@
     font-weight: bold;
     font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: smaller;
+    background-color: white;
 }
 
 .comment-box{
     border-bottom: solid 2px rgb(223, 222, 222);
     padding-bottom: 5px;
     margin-bottom: 15px;
+    background-color: white;
 }
 
 .comment{
@@ -221,30 +152,10 @@
     margin-left: 55px;
 }
 
-.media-icon{
-    width: 20px;
-    height: 20px; 
-    fill: #00acee;
-}
-
-.gif-icon{
-    width: 20px;
-    height: 20px; 
-    fill: #00acee;
-}
-
-.chart-icon{
-    width: 20px;
-    height: 20px; 
-    fill: #00acee;
-}
-
-.emoji-icon{
-    width: 20px;
-    height: 20px; 
-    fill: #00acee;
-}
-
+.media-icon,
+.gif-icon,
+.chart-icon,
+.emoji-icon,
 .calendar-icon{
     width: 20px;
     height: 20px; 
@@ -271,6 +182,50 @@
     
     margin: 30px;
 }
+
+.main .posts{
+    overflow: scroll;
+}
+
+.post-area{
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    border: solid 1px rgb(223, 222, 222);
+    background-color: white;
+    overflow: scroll;
+}
+
+.posts h2{
+    display: inline;
+    font-size: smaller;
+}
+
+.posts h3{
+    display: inline;
+    font-size: smaller;
+    color: grey;
+}
+
+.comment-icon,
+.repost-icon,
+.like-icon,
+.share-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.comment-like-icons{
+display: grid;
+grid-template-columns: repeat(4, auto);
+}
+
+
+
+
+
+
+
+
 
 
 /* RIGHT-MENU */
