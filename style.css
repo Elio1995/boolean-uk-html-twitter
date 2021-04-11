@@ -18,10 +18,6 @@
 }
 
 
-
-
-
-
 /* LEFT-MENU */
 .left-menu{
     border: solid 1px rgb(223, 222, 222);
@@ -142,10 +138,19 @@ border-radius: 15px 15px 15px 15px;
     transition: 0.5s;
 }
 
+.navigation .tweet:hover{
+    text-decoration: none;
+    background-color: none;
+    color: black;
+    transform: translate(10px, 5px);
+    transform: scale(1.1);
+}
+
 .navigation .tweet:active{
         background-color: none;
-        color: black;
-        transform: scale(1.1); 
+        color: white;
+        transform: scale(1.05); 
+        transform: translate(10px, 5px);
 }
    
 .tweet span{
@@ -166,6 +171,7 @@ border-radius: 15px 15px 15px 15px;
         text-decoration: none;
         background-color: none;
         color: black;
+        transform: translate(10px, 5px);
         transform: scale(1.1);
     }
 
@@ -316,7 +322,7 @@ place-items: right;
 
 .comment-tweet{
     display: grid;
-    grid-columns: 80% 20%;
+    grid-template-columns: 80% 20%;
 }
 
 .comment-icon{
@@ -365,26 +371,46 @@ transform: scale(1.2);
 
 
 .tweet-1{
+
     background-color: #00acee;
     margin-right: 30px;
+    text-align: center;
+    padding: 10px;
     border-radius: 30px 30px 30px 30px;
     box-shadow: 1px 1px 1px 1px #00acee;
     border: none;
-    margin-left: 400px;
-    margin-bottom: 10px;
-    /* display: inline; */
-    
+    margin-top: 10px;
+    transition: 0.5s;
 }
 
-.tweet-1:hover
+.tweet-1:hover{
+    transform: scale(1.1);
+    transform: translate(10px, 5px);
+}
 
-.tweet-1 a{
+.tweet-1:active{
+    transform: scale(1.05);
+}
+
+
+.tweet-1 a {
+    text-decoration: white;
+}
+
+.tweet-1 a span{
     text-decoration: none;
     color: white;
     font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-weight: bold;
-    padding: 20px;
 }
+
+.tweet-1 a span:hover{
+ color: black;
+}
+
+.tweet-1 a span:active{
+    color: white;
+   }
 
 .main .posts{
     overflow: scroll;
@@ -396,22 +422,36 @@ transform: scale(1.2);
     border: solid 1px rgb(223, 222, 222);
     background-color: white;
     overflow: scroll;
+    padding: 10px;
 }
 
 .posts h2{
     display: inline;
     font-size: smaller;
+    transition: 0.5s;
+}
+
+.posts h2:hover{
+ color: #00acee;
+ transform: scale(1.1);
+}
+
+.posts h2:active{
+color: black;
+transform: scale(1.05);
+transform: translate(4px, 2px);
 }
 
 .posts h3{
     display: inline;
     font-size: smaller;
     color: grey;
+    transition: 0.5s;
 }
 
 .top-post{
     display: grid;
-    grid-template-columns: 17% 68% 15%;
+    grid-template-columns: 19% 66% 15%;
 }
 
 .comment-icon,
@@ -420,6 +460,23 @@ transform: scale(1.2);
 .share-icon{
     width: 20px;
     height: 20px;
+}
+
+.comment-icon:hover,
+.repost-icon:hover,
+.like-icon:hover,
+.share-icon:hover{
+    transform: scale(1.2);
+    fill: #00acee;
+}
+
+.comment-icon:active,
+.repost-icon:active,
+.like-icon:active,
+.share-icon:active{
+    transform: scale(1.1);
+    fill: black;
+    transform: translate(4px, 2px);
 }
 
 .comment-like-icons{
@@ -451,6 +508,17 @@ grid-template-columns: repeat(4, auto);
     border-radius: 30px 30px 30px 30px;
     overflow: hidden;
     position: sticky;
+    transition: 0.5s;
+}
+
+.search:hover{
+    transform: scale(1.1);
+    transform: translate(10px, 5px);
+}
+
+.search:active{
+    transform: scale(1.05);
+    transform: translate(5px, 5px);
 }
 
 
@@ -458,8 +526,8 @@ grid-template-columns: repeat(4, auto);
     border: none;
     background-color: rgb(223, 222, 222);
     padding-left: 5px;
-
 }
+
 
 .search-input{
     width: auto;
@@ -469,10 +537,11 @@ grid-template-columns: repeat(4, auto);
     background-color: rgb(223, 222, 222);
 }
 
+
+
 .search-icon{
     width: 20px;
 }
-
 
 .news{
     border: solid 1px black;
@@ -484,6 +553,12 @@ grid-template-columns: repeat(4, auto);
 .news .title{
     border-bottom: solid 1px white;   
     padding: 10px 10px 10px 10px;
+    transition: 0.8s;
+}
+
+.news .title:hover{
+    transform: scale(1.05);
+    color: #00acee;
 }
 
 .main-news{
@@ -504,11 +579,26 @@ padding: 10px 10px 10px 10px;
     color: black;
 }
 
+.news-text{
+    transition: 0.5s;
+}
+
+
+.news-text:hover{
+    color: #00acee;
+    transform: scale(1.1);
+    transform: translate(6px, 3px);
+}
+
+.news-text:active{
+    transform: scale(1.05);
+    transform: translate(8px, 4px);
+}
 
 
 
 .main-news .news-text h2{
-    font-size: 17px;
+    font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 5px 0 5px 0;
 }
@@ -517,8 +607,29 @@ padding: 10px 10px 10px 10px;
     margin-left: 40px ;
 }
 
+.news-image svg:hover{
+    transform: scale(1.2);
+    fill: #00acee;
+}
+
+
 .end-right-menu {
     margin: 10px 0 10px 30px;
+}
+
+.end-right-menu p{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 0.5s; 
+}
+
+.end-right-menu p:hover{
+    color: #00acee;
+    transform: scale(1.05);
+}
+
+.end-right-menu p:active{
+    transform: scale(1.02);
+    transform: translate(6px, 3px);
 }
 
 input : not(:placeholder-shown):invalid {
