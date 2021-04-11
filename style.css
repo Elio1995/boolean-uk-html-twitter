@@ -6,102 +6,231 @@
 
 
 .container{
-    border: solid 2px black;
+    border: solid 1px rgb(223, 222, 222);
 
     display: grid;
-    grid-template-columns: minmax(auto, 1fr) minmax(400px,1fr) minmax(auto, 1fr);
+    grid-template-columns: minmax(auto, 350px) minmax(400px,1.5fr) minmax(auto, 400px);
 
     width: 100vw;
     height: 100vh;
     background-color: rgb(223, 222, 222);
+  
 }
+
+
+
+
+
 
 /* LEFT-MENU */
 .left-menu{
-    border: solid 2px black;
+    border: solid 1px rgb(223, 222, 222);
     padding: 10px 0 0 120px;
     display: grid;
-    grid-template-rows: auto 70px;
+    grid-template-rows: 1fr 70px;
     background-color: white;
 }
 
 .navigation{
     display: grid;
-    grid-auto-rows: 45px;
+    grid-template: 
+    ". icons ." 1fr/
+    auto 1fr auto;
 
+    justify-content: center;
+
+
+}
+
+.nav-icons{
+    grid-area: icons;
+    display: grid;
+    grid-auto-rows: 50px;
 }
 
 .twitter-icon{
     height: 25px;
     width: 25px;
-    margin-bottom: 50px;
 }
 
-.home p,
-.explore p,
-.notifications p,
-.messages p,
-.bookmarks p,
-.lists p,
-.profile p,
-.more p{
-    display: inline;
+.home a,
+.explore a,
+.notifications a,
+.messages a,
+.bookmarks a,
+.lists a,
+.profile a,
+.more a{
+    /* display: inline; */
     font-size: larger;
-    padding: 10px;
+    text-decoration: none;
+    color: black;
     font-weight: bold;
     font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    
+    transition: 0.3s;
 }
 
-.home-icon,
+.home a:hover,
+.explore a:hover,
+.notifications a:hover,
+.messages a:hover,
+.bookmarks a:hover,
+.lists a:hover,
+.profile a:hover,
+.more a:hover{
+transform: scale(1.1);
+background-color: #00acee;
+font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+border-radius: 15px 15px 15px 15px;
+ padding: 7px;   
+ color: white;
+}
+
+.home a:active,
+.explore a:active,
+.notifications a:active,
+.messages a:active,
+.bookmarks a:active,
+.lists a:active,
+.profile a:active,
+.more a:active{
+transform: scale(1.05);
+background-color: rgb(228, 155, 228);
+font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+border-radius: 15px 15px 15px 15px;
+ padding: 7px;   
+ color: #00acee;
+}
+
+.home a span,
+.explore a span,
+.notifications a span,
+.messages a span,
+.bookmarks a span,
+.lists a span,
+.profile a span,
+.more a span{
+
+    font-size: smaller;
+    margin-left: 10px ;
+
+    }
+    
+
+
+.home .home-icon,
 .explore-icon,
 .notifications-icon,
 .messages-icon,
 .bookmarks-icon,
 .lists-icon,
 .profile-icon,
-.more-icon{
- width: 25px;
- height: 25px;
+.more-icon {
+ width: 20px;
+ height: 20px;
 }
 
-
-
-.tweet{
+.navigation .tweet {
     background-color: #00acee;
     margin-right: 30px;
+    text-align: center;
+    padding: 5px;
     border-radius: 30px 30px 30px 30px;
     box-shadow: 1px 1px 1px 1px #00acee;
     border: none;
+    margin-top: 10px;
+    transition: 0.5s;
 }
 
-.tweet a{
-    text-decoration: none;
+.navigation .tweet:active{
+        background-color: none;
+        color: black;
+        transform: scale(1.1); 
+}
+   
+.tweet span{
+    font-size: larger;
     color: white;
     font-weight: bold;
     font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
+    margin: 40px;
+    padding: 20px;
+    }
+
+    .tweet a{
+        text-decoration: none;
+        transition: 0.5s;
+    }
+
+    .tweet a:hover{
+        text-decoration: none;
+        background-color: none;
+        color: black;
+        transform: scale(1.1);
+    }
+
+
 
 .my-profile{
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    transition: 0.5s;
+}
+
+.my-profile span:hover{
+    transform: scale(1.2);
+    color: #00acee;
+}
+
+.my-profile span:active{
+    transform: scale(1.05);
+    color: white;
+    background-color:#00acee ;
+}
+
+.my-profile a{
+    text-decoration: none;
+    display: inline;
+}
+
+.my-profile span{
+    color: black;
 
 }
+
+
 
 .profile-picture{
     height: 40px;
     width: 40px;
     border-radius: 50%;
     margin-left: 10px;
+    transition: 0.5s;
+}
+
+.profile-picture:hover{
+    transform: scale(1.2);
 }
 
 
 .points{
-  margin-left: 140px; 
+  margin-left: 40px; 
+  display: grid;
+place-items: right;
+}
+
+.points:hover{
+    transform: scale(1.2);
+}
+
+.points:active{
+    transform: scale(1.1);
 }
 
 
 /* MAIN */
 .main{
-    border: solid 2px black;
+    border: solid 1px rgb(223, 222, 222);
     background-color: rgb(223, 222, 222);
     overflow: scroll;
     overflow: auto;
@@ -111,23 +240,50 @@
     display: none; 
 }
 
+.top-main{
+    border: solid 1px rgb(223, 222, 222);
+    display: grid;
+    grid-template-columns: 90% 10%;
+    padding: 10px;
+    background-color: white;
+    position: sticky; 
+}
 
-.main h1{
-    border-bottom: solid 2px rgb(223, 222, 222);
-    margin-bottom: 5px;
-    padding: 5px;
+.top-main h1{
     font-weight: bold;
     font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 20px;
-    background-color: white;
+    transition: 0.5s;
+}  
+.top-main h1:hover{
+ color:#00acee ;
+}  
+
+
+
+
+.star-icon{
+    width: 25px;
+    height: 25px;
+    fill: #00acee;
+    transition: 0.5s;
 }
+
+.star-icon:hover{
+  transform: scale(1.2);
+  fill: black;
+}
+
+
 
 .comment-box{
     border-bottom: solid 2px rgb(223, 222, 222);
     padding-bottom: 5px;
     margin-bottom: 15px;
     background-color: white;
+    resize: none;
 }
+
 
 .comment{
     position: relative;
@@ -144,13 +300,38 @@
     margin-top: 10px;
     overflow: hidden;
     border: none;
+    transition: 0.3s;
 }
 
+.comment .write-comment:hover{
+    background-color:#9ed4e9;
+    transform: scale(1.05);
+}
+
+.comment .write-comment:active{
+    background-color:white;
+    transform: scale(1.03);
+    border: none;
+}
+
+.comment-tweet{
+    display: grid;
+    grid-columns: 80% 20%;
+}
 
 .comment-icon{
-    display: inline;
-    margin-left: 55px;
+margin-left: 30px; 
+display: grid;
+grid-template-columns: repeat(5, auto);
+} 
+
+.comment-icon button{
+    background-color: white;
+    border: none;
 }
+
+
+
 
 .media-icon,
 .gif-icon,
@@ -160,6 +341,26 @@
     width: 20px;
     height: 20px; 
     fill: #00acee;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+.media-icon:hover,
+.gif-icon:hover,
+.chart-icon:hover,
+.emoji-icon:hover,
+.calendar-icon:hover{
+fill: black;
+transform: scale(1.3);
+}
+
+.media-icon:active,
+.gif-icon:active,
+.chart-icon:active,
+.emoji-icon:active,
+.calendar-icon:active{
+fill: purple;
+transform: scale(1.2);
 }
 
 
@@ -169,18 +370,20 @@
     border-radius: 30px 30px 30px 30px;
     box-shadow: 1px 1px 1px 1px #00acee;
     border: none;
-    margin-left: 110px;
-    display: inline;
+    margin-left: 400px;
+    margin-bottom: 10px;
+    /* display: inline; */
     
 }
+
+.tweet-1:hover
 
 .tweet-1 a{
     text-decoration: none;
     color: white;
     font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-weight: bold;
-    
-    margin: 30px;
+    padding: 20px;
 }
 
 .main .posts{
@@ -204,6 +407,11 @@
     display: inline;
     font-size: smaller;
     color: grey;
+}
+
+.top-post{
+    display: grid;
+    grid-template-columns: 17% 68% 15%;
 }
 
 .comment-icon,
@@ -230,32 +438,119 @@ grid-template-columns: repeat(4, auto);
 
 /* RIGHT-MENU */
 .right-menu{
-    border: solid 2px black;
+    border: solid 1px rgb(223, 222, 222);
+    background-color: white;
+    overflow: scroll;
+    
 }
 
 .search{
-    /* position: relative; */
-    border: solid 2px black;
     display: grid;
     grid-template-columns: 35px 1fr;
-    margin: 0 20px 0 20px;
+    margin: 10px 80px 0 20px;
+    border-radius: 30px 30px 30px 30px;
+    overflow: hidden;
+    position: sticky;
 }
 
 
 .search-button{
-    /* position: absolute; */
     border: none;
+    background-color: rgb(223, 222, 222);
+    padding-left: 5px;
 
 }
 
 .search-input{
     width: auto;
     height: 35px;
+    width: 100vw;
+    border: none;
+    background-color: rgb(223, 222, 222);
 }
 
 .search-icon{
-    width: 30px;
+    width: 20px;
+}
+
+
+.news{
+    border: solid 1px black;
+    margin: 15px 80px 0 20px;
+    background-color: rgb(223, 222, 222);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.news .title{
+    border-bottom: solid 1px white;   
+    padding: 10px 10px 10px 10px;
+}
+
+.main-news{
+display: grid;
+grid-template-columns: auto 70px;
+border-bottom: solid 1px white;
+padding: 10px 10px 10px 10px;
+}
+
+.last-main-news{
+    display: grid;
+grid-template-columns: auto 70px;
+padding: 10px 10px 10px 10px;
+}
+
+.news-text a{
+    text-decoration: none;
+    color: black;
 }
 
 
 
+
+.main-news .news-text h2{
+    font-size: 17px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 5px 0 5px 0;
+}
+
+.news-image svg{
+    margin-left: 40px ;
+}
+
+.end-right-menu {
+    margin: 10px 0 10px 30px;
+}
+
+input : not(:placeholder-shown):invalid {
+    bottom: solid 2px blue;
+}
+
+
+
+@media screen and (max-width:1000px){
+    
+    body{  
+     grid-template: 
+     "left-menu main" 1fr/
+     200px 1fr;}
+     .right-menu{
+         display: none;
+     }
+     .navigation a span{
+         display: none;
+     }
+     .navigation .tweet{
+         display: none;
+     }
+    
+     @media screen and (max-width:700px) {
+         body{
+             grid-template: 
+             "main"1fr/
+             1fr;
+         }
+         .left-menu {
+             display: none;
+         } 
+     }
+ }
