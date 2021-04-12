@@ -138,6 +138,19 @@ border-radius: 15px 15px 15px 15px;
     transition: 0.5s;
 }
 
+.navigation .tweet .twitter-icon{
+   width: 30px;
+}
+
+@media screen (max-width: 600px) {
+    .navigation .tweet .twitter-icon{
+        display: block;
+    } 
+    .tweet span{
+        display: none;
+    }
+}
+
 .navigation .tweet:hover{
     text-decoration: none;
     background-color: none;
@@ -238,8 +251,9 @@ place-items: right;
 .main{
     border: solid 1px rgb(223, 222, 222);
     background-color: rgb(223, 222, 222);
-    overflow: scroll;
+     overflow: scroll;
     overflow: auto;
+    position: relative;
 }
 
 ::-webkit-scrollbar { 
@@ -252,7 +266,8 @@ place-items: right;
     grid-template-columns: 90% 10%;
     padding: 10px;
     background-color: white;
-    position: sticky; 
+    position: sticky;
+    top: 0; 
 }
 
 .top-main h1{
@@ -310,7 +325,7 @@ place-items: right;
 }
 
 .comment .write-comment:hover{
-    background-color:#9ed4e9;
+    background-color:white;
     transform: scale(1.05);
 }
 
@@ -508,6 +523,8 @@ grid-template-columns: repeat(4, auto);
     border-radius: 30px 30px 30px 30px;
     overflow: hidden;
     position: sticky;
+    position: sticky;
+    top: 0; 
     transition: 0.5s;
 }
 
@@ -544,7 +561,6 @@ grid-template-columns: repeat(4, auto);
 }
 
 .news{
-    border: solid 1px black;
     margin: 15px 80px 0 20px;
     background-color: rgb(223, 222, 222);
     border-radius: 10px 10px 10px 10px;
@@ -643,17 +659,17 @@ input : not(:placeholder-shown):invalid {
     body{  
      grid-template: 
      "left-menu main" 1fr/
-     200px 1fr;}
-     .right-menu{
+     100px 1fr;}
+     /* .right-menu{
          display: none;
-     }
+     } */
      .navigation a span{
          display: none;
      }
-     .navigation .tweet{
+     /* .navigation .tweet{
          display: none;
      }
-    
+     */
      @media screen and (max-width:700px) {
          body{
              grid-template: 
@@ -663,5 +679,9 @@ input : not(:placeholder-shown):invalid {
          .left-menu {
              display: none;
          } 
+
+         .right-menu{
+             display: none;
+         }
      }
  }
